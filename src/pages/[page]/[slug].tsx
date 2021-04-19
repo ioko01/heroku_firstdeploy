@@ -6,11 +6,11 @@ import Home from "../components/content/Home";
 type Page =
     | {
           page: "bet-result";
-          slug: "type";
+          slug?: "type";
       }
     | {
           page: "about";
-          slug: "howto";
+          slug: "howto" | "rule";
       };
 
 interface Props {
@@ -24,6 +24,7 @@ const Pages = ({ params }: Props) => {
 
     if (params.page === "about") {
         if (params.slug === "howto") return <Home />;
+        if (params.slug === "rule") return <h1>sd</h1>;
     }
 };
 
@@ -39,6 +40,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
     const pages: Props["params"][] = [
         { page: "bet-result", slug: "type" },
         { page: "about", slug: "howto" },
+        { page: "about", slug: "rule" },
     ];
 
     return {
