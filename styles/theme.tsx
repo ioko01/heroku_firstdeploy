@@ -13,7 +13,7 @@ declare module "@material-ui/core/styles/createPalette" {
 export const theme = createMuiTheme({
     palette: {
         primary: {
-            main: "#222",
+            main: "#000",
             light: "whitesmoke",
             white: "#fff",
         },
@@ -84,6 +84,16 @@ export const theme = createMuiTheme({
                     minHeight: "auto",
                 },
                 minHeight: "auto",
+            },
+        },
+        MuiAppBar: {
+            colorPrimary: {
+                backgroundColor: "#000",
+                color: "#fff",
+            },
+            colorSecondary: {
+                backgroundColor: "whitesmoke",
+                color: "#000",
             },
         },
     },

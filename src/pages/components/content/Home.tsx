@@ -1,4 +1,4 @@
-import { Box, createStyles, Grid, makeStyles } from "@material-ui/core";
+import { Box, createStyles, makeStyles, Typography } from "@material-ui/core";
 import React from "react";
 
 interface Props {}
@@ -6,16 +6,16 @@ interface Props {}
 const useStyles = makeStyles(() =>
     createStyles({
         notice: {
-            border: "1px solid skyblue",
+            border: "1px solid #000",
             padding: 10,
-            background: "#e3f4fc",
+            background: "#fff",
             "& h1": {
                 color: "red",
                 fontSize: 24,
-                borderBottom: "1px solid skyblue",
+                borderBottom: "1px solid #000",
             },
             "& h1 span": {
-                color: "skyblue",
+                color: "#000",
                 fontSize: 14,
                 fontWeight: "lighter",
                 float: "right",
@@ -23,7 +23,7 @@ const useStyles = makeStyles(() =>
         },
         betList: {
             marginTop: 20,
-            border: "1px solid #d5d1d1",
+            border: "1px solid #000",
             padding: 10,
             background: "white",
         },
@@ -34,16 +34,20 @@ const Notice = () => {
     const classes = useStyles();
     return (
         <Box position="static" className={classes.notice}>
-            <h1>
+            <Typography variant="h1" component="h1">
                 ประกาศ <span>วันที่ 22/04/63</span>
-            </h1>
+            </Typography>
         </Box>
     );
 };
 
 const BetList = () => {
     const classes = useStyles();
-    return <Box position="static">ss</Box>;
+    return (
+        <Box position="static" className={classes.betList}>
+            ss
+        </Box>
+    );
 };
 
 const Home = (props: Props) => {

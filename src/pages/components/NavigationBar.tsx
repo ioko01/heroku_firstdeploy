@@ -20,9 +20,12 @@ const useStyles = makeStyles(() =>
 );
 
 const Nav1 = () => {
-    const classes = useStyles();
     return (
-        <AppBar position="static">
+        <AppBar
+            position="static"
+            color="secondary"
+            style={{ padding: "5px 0" }}
+        >
             <Toolbar>
                 <Box
                     width="100%"
@@ -73,7 +76,12 @@ const Nav2 = () => {
     return (
         <AppBar position="static">
             <Toolbar>
-                <Box marginX="auto">
+                <Box
+                    width="100%"
+                    display="flex"
+                    justifyContent="center"
+                    textAlign="center"
+                >
                     <ActiveLink href="/" as="/" underline="none">
                         <Box
                             position="relative"
