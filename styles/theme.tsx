@@ -65,6 +65,9 @@ export const theme = createMuiTheme({
             },
         },
         MuiTypography: {
+            h1: {
+                fontSize: 18,
+            },
             h5: {
                 fontSize: 16,
             },
@@ -94,6 +97,14 @@ export const theme = createMuiTheme({
             colorSecondary: {
                 backgroundColor: "whitesmoke",
                 color: "#000",
+            },
+        },
+        MuiCard: {
+            root: {
+                border: "1px solid #212121",
+                borderRadius: 0,
+                boxShadow: "none",
+                backgroundColor: "whitesmoke",
             },
         },
     },
