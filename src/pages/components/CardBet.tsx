@@ -19,27 +19,25 @@ const useStyles = makeStyles((theme: Theme) =>
     createStyles({
         root: {
             display: "flex",
+            backgroundColor: theme.palette.success.main,
+            color: theme.palette.primary.white,
         },
         details: {
             display: "flex",
             flexDirection: "column",
+            width: "100%",
         },
         content: {
             flex: "1 0 auto",
+            "&:last-child": {
+                padding: 10,
+            },
         },
         cover: {
-            width: 60,
-            height: 40,
-        },
-        controls: {
-            display: "flex",
-            alignItems: "center",
-            paddingLeft: theme.spacing(1),
-            paddingBottom: theme.spacing(1),
-        },
-        playIcon: {
-            height: 38,
-            width: 38,
+            minWidth: 55,
+            minHeight: 30,
+            maxWidth: 70,
+            maxHeight: 40,
         },
     })
 );
@@ -60,11 +58,19 @@ const CardBet = () => {
             <div className={classes.details}>
                 <CardContent className={classes.content}>
                     <Typography component="h5" variant="h5">
-                        Live From Space
+                        หวยลาว STAR VIP
                     </Typography>
-                    <Typography variant="subtitle1" color="textSecondary">
-                        Mac Miller
+                    <Typography component="h6" variant="h6">
+                        21-04-2021
                     </Typography>
+                    <Box display="flex" justifyContent="space-between">
+                        <Typography variant="subtitle1" color="textSecondary">
+                            เวลาปิด
+                        </Typography>
+                        <Typography variant="subtitle1" color="textSecondary">
+                            21/04/2021, 21:45:00
+                        </Typography>
+                    </Box>
                 </CardContent>
             </div>
         </Card>

@@ -18,7 +18,12 @@ export const theme = createMuiTheme({
             white: "#fff",
         },
         secondary: {
-            main: "#ff6347",
+            main: "#212121",
+            light: "whitesmoke",
+        },
+        success: {
+            main: "#2a722a",
+            dark: "#2a722a",
         },
     },
     overrides: {
@@ -75,7 +80,10 @@ export const theme = createMuiTheme({
                 fontSize: 14,
             },
             subtitle1: {
-                fontSize: 12,
+                fontSize: 10,
+            },
+            colorTextSecondary: {
+                color: "inherit",
             },
         },
         MuiToolbar: {
@@ -98,11 +106,14 @@ export const theme = createMuiTheme({
                 backgroundColor: "whitesmoke",
                 color: "#000",
             },
+            colorDefault: {
+                backgroundColor: "#212121",
+                color: "#fff",
+            },
         },
         MuiCard: {
             root: {
                 border: "1px solid #212121",
-                borderRadius: 0,
                 boxShadow: "none",
                 backgroundColor: "whitesmoke",
             },

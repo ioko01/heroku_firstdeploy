@@ -23,7 +23,7 @@ const Nav1 = () => {
     return (
         <AppBar
             position="static"
-            color="secondary"
+            color="primary"
             style={{ padding: "5px 0" }}
         >
             <Toolbar>
@@ -74,7 +74,7 @@ const Nav1 = () => {
 const Nav2 = () => {
     const classes = useStyles();
     return (
-        <AppBar position="static">
+        <AppBar position="static" color="default">
             <Toolbar>
                 <Box
                     width="100%"

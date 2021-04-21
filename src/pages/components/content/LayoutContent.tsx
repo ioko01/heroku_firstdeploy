@@ -19,7 +19,7 @@ const IndexContent = ({ children }: Props) => {
     const classes = useStyles();
     const bg = theme.white;
     return (
-        <Box className={`${bg} ${classes.fullContent}`}>
+        <Box className={`${classes.fullContent}`} bgcolor="primary.main">
             <Typography component="div" variant="body1">
                 <Box style={{ padding: 15 }}>{children}</Box>
             </Typography>

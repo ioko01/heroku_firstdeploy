@@ -16,14 +16,11 @@ const useStyles = makeStyles(() =>
         notice: {
             border: "1px solid #000",
             padding: 10,
-            background: "#fff",
             "& h1": {
-                color: "red",
                 fontSize: 24,
-                borderBottom: "1px solid #000",
+                borderBottom: "1px solid #fff",
             },
             "& h1 span": {
-                color: "#000",
                 fontSize: 14,
                 fontWeight: "lighter",
                 float: "right",
@@ -33,7 +30,6 @@ const useStyles = makeStyles(() =>
             marginTop: 20,
             border: "1px solid #000",
             padding: 10,
-            background: "white",
         },
     })
 );
@@ -41,7 +37,12 @@ const useStyles = makeStyles(() =>
 const Notice = () => {
     const classes = useStyles();
     return (
-        <Box position="static" className={classes.notice}>
+        <Box
+            position="static"
+            bgcolor="secondary.main"
+            color="secondary.light"
+            className={classes.notice}
+        >
             <Typography variant="h1" component="h1">
                 ประกาศ <span>วันที่ 22/04/63</span>
             </Typography>
@@ -52,7 +53,12 @@ const Notice = () => {
 const BetList = () => {
     const classes = useStyles();
     return (
-        <Box position="static" className={classes.betList}>
+        <Box
+            position="static"
+            bgcolor="secondary.main"
+            color="secondary.light"
+            className={classes.betList}
+        >
             <Typography
                 variant="h1"
                 component="h1"
