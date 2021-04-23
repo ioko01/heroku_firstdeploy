@@ -1,6 +1,5 @@
 import { GetStaticPaths, GetStaticProps } from "next";
 import React from "react";
-import BetResult from "../components/content/BetResult";
 import Home from "../components/content/Home";
 
 type Page =
@@ -19,12 +18,12 @@ interface Props {
 
 const Pages = ({ params }: Props) => {
     if (params.page === "bet-result") {
-        if (params.slug === "type") return <BetResult />;
+        if (params.slug === "type") return <h1>BetResultType</h1>;
     }
 
     if (params.page === "about") {
         if (params.slug === "howto") return <Home />;
-        if (params.slug === "rule") return <h1>sd</h1>;
+        if (params.slug === "rule") return <h1>rult</h1>;
     }
 };
 

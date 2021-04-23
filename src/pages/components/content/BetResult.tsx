@@ -3,7 +3,7 @@ import React from "react";
 interface Props {}
 
 const BetResult = (props: Props) => {
-    return <div>bet</div>;
+    return <div>betResult</div>;
 };
 
 export default BetResult;

@@ -51,7 +51,7 @@ const CardBet = () => {
             <CardMedia
                 style={{ margin: 5, marginTop: 10 }}
                 className={classes.cover}
-                image="hanoi.png"
+                image="/hanoi.png"
                 title="hanoi"
             />
 
