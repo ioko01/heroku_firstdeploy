@@ -1,19 +1,23 @@
 import { createMuiTheme, createStyles, makeStyles } from "@material-ui/core";
+import { blue, common, green, indigo } from "@material-ui/core/colors";
 
 declare module "@material-ui/core/styles/createPalette" {
     interface SimplePaletteColorOptions {
         white?: string;
+        secondary?: string;
     }
 
     interface PaletteColor {
         white: string;
+        secondary?: string;
     }
 }
 
 export const theme = createMuiTheme({
     palette: {
         primary: {
-            main: "#000",
+            main: indigo["700"],
+            secondary: indigo["50"],
             light: "whitesmoke",
             white: "#fff",
         },
@@ -22,8 +26,7 @@ export const theme = createMuiTheme({
             light: "whitesmoke",
         },
         success: {
-            main: "#2a722a",
-            dark: "#2a722a",
+            main: green["500"],
         },
     },
     overrides: {
@@ -52,20 +55,18 @@ export const theme = createMuiTheme({
                 display: "inline-block",
                 position: "relative",
                 color: "inherit",
-                paddingLeft: 7,
-                paddingRight: 7,
-                paddingTop: 5,
-                paddingBottom: 5,
+                padding: "10px",
                 "&.link-active div:nth-last-child(1)": {
                     position: "absolute",
-                    backgroundColor: "#fff",
+                    backgroundColor: common["white"],
                     height: "100%",
                     width: "100%",
                     bottom: 0,
                     left: 0,
                 },
                 "&.link-active": {
-                    color: "black",
+                    color: indigo["700"],
+                    boxShadow: "0 0 3px 0 #303f9f",
                 },
             },
         },
@@ -96,19 +97,25 @@ export const theme = createMuiTheme({
                 },
                 minHeight: "auto",
             },
+            gutters: {
+                "@media (min-width: 600px)": {
+                    padding: 0,
+                },
+                padding: 0,
+            },
         },
         MuiAppBar: {
             colorPrimary: {
-                backgroundColor: "#000",
-                color: "#fff",
+                backgroundColor: indigo["700"],
+                color: common["white"],
             },
             colorSecondary: {
-                backgroundColor: "whitesmoke",
-                color: "#000",
+                backgroundColor: common["black"],
+                color: common["white"],
             },
             colorDefault: {
-                backgroundColor: "#212121",
-                color: "#fff",
+                backgroundColor: "#fff",
+                color: "#000",
             },
         },
         MuiCard: {
@@ -116,6 +123,14 @@ export const theme = createMuiTheme({
                 border: "1px solid #212121",
                 boxShadow: "none",
                 backgroundColor: "whitesmoke",
+            },
+        },
+        MuiTableCell: {
+            paddingNone: {
+                "&:last-child": {
+                    padding: 5,
+                },
+                padding: 5,
             },
         },
     },

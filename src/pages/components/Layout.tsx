@@ -1,4 +1,18 @@
-import { Box, CssBaseline, ThemeProvider } from "@material-ui/core";
+import {
+    Box,
+    createStyles,
+    CssBaseline,
+    makeStyles,
+    Paper,
+    Table,
+    TableBody,
+    TableCell,
+    TableContainer,
+    TableHead,
+    TableRow,
+    Theme,
+    ThemeProvider,
+} from "@material-ui/core";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import React from "react";
@@ -26,6 +40,45 @@ const HeadHTML = () => {
     );
 };
 
+const useStyles = makeStyles((theme: Theme) =>
+    createStyles({
+        root: {
+            padding: theme.spacing(1),
+        },
+    })
+);
+
+const Leftbar = () => {
+    const classes = useStyles();
+    const layout = useLayout();
+    return (
+        <Box
+            className={`${layout.left} ${classes.root}`}
+            bgcolor="primary.main"
+        >
+            <TableContainer
+                component={Paper}
+                variant="elevation"
+                elevation={0}
+                square={true}
+            >
+                <Table>
+                    <TableHead>
+                        <TableRow>
+                            <TableCell padding="none">asd</TableCell>
+                            <TableCell padding="none">asd</TableCell>
+                            <TableCell padding="none">asd</TableCell>
+                            <TableCell padding="none">asd</TableCell>
+                            <TableCell padding="none">asd</TableCell>
+                            <TableCell padding="none">asd</TableCell>
+                        </TableRow>
+                    </TableHead>
+                </Table>
+            </TableContainer>
+        </Box>
+    );
+};
+
 const Rightbar = ({ children }: LayoutProps) => {
     const layout = useLayout();
     return (
@@ -44,7 +97,7 @@ const Layout = ({ children }: LayoutProps) => {
             <ThemeProvider theme={theme}>
                 <CssBaseline />
                 <Box display="flex">
-                    {/* <Leftbar /> */}
+                    <Leftbar />
                     <Rightbar children={children} />
                 </Box>
             </ThemeProvider>

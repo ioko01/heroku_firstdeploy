@@ -3,84 +3,34 @@ import {
     Box,
     createStyles,
     makeStyles,
+    Theme,
     Toolbar,
 } from "@material-ui/core";
+import { indigo } from "@material-ui/core/colors";
 import { EditOutlined, ListAlt, Person } from "@material-ui/icons";
 import React from "react";
 import ActiveLink from "../../helpers/ActiveLink";
 
 interface Props {}
 
-const useStyles = makeStyles(() =>
+const useStyles = makeStyles((theme: Theme) =>
     createStyles({
         transition: {
             transition: "height .25s",
         },
     })
 );
-
 const Nav1 = () => {
-    return (
-        <AppBar
-            position="static"
-            color="primary"
-            style={{ padding: "5px 0" }}
-        >
-            <Toolbar>
-                <Box
-                    width="100%"
-                    display="flex"
-                    justifyContent="space-evenly"
-                    paddingY={1}
-                >
-                    <Box
-                        display="flex"
-                        flexDirection="column"
-                        alignItems="center"
-                    >
-                        <EditOutlined fontSize="default"></EditOutlined>
-                        <p>หวยไทย</p>
-                    </Box>
-                    <Box
-                        display="flex"
-                        flexDirection="column"
-                        alignItems="center"
-                    >
-                        <ListAlt fontSize="default"></ListAlt>
-                        <p>งวดที่ 04/13/2021</p>
-                    </Box>
-                    <Box
-                        display="flex"
-                        flexDirection="column"
-                        alignItems="center"
-                    >
-                        <ListAlt fontSize="default"></ListAlt>
-                        <p>เวลา</p>
-                    </Box>
-                    <Box
-                        display="flex"
-                        flexDirection="column"
-                        alignItems="center"
-                    >
-                        <Person fontSize="default"></Person>
-                        <p>ชื่อผู้ใช้</p>
-                    </Box>
-                </Box>
-            </Toolbar>
-        </AppBar>
-    );
-};
-
-const Nav2 = () => {
     const classes = useStyles();
     return (
-        <AppBar position="static" color="default">
+        <AppBar position="static" color="primary">
             <Toolbar>
                 <Box
-                    width="100%"
+                    width="auto"
                     display="flex"
                     justifyContent="center"
                     textAlign="center"
+                    style={{ whiteSpace: "nowrap" }}
                 >
                     <ActiveLink href="/" as="/" underline="none">
                         <Box
@@ -227,7 +177,6 @@ const NavigationBar = (props: Props) => {
     return (
         <>
             <Nav1 />
-            <Nav2 />
         </>
     );
 };

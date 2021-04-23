@@ -4,31 +4,33 @@ import {
     Grid,
     GridSpacing,
     makeStyles,
+    Theme,
     Typography,
 } from "@material-ui/core";
-import React, { useState } from "react";
+import React from "react";
 import CardBet from "../CardBet";
 
 interface Props {}
 
-const useStyles = makeStyles(() =>
+const useStyles = makeStyles((theme: Theme) =>
     createStyles({
         notice: {
-            border: "1px solid #000",
+            borderStyle: "solid",
+            borderWidth: 1,
+            borderColor: theme.palette.primary.dark,
             padding: 10,
             "& h1": {
                 fontSize: 24,
-                borderBottom: "1px solid #fff",
-            },
-            "& h1 span": {
-                fontSize: 14,
-                fontWeight: "lighter",
-                float: "right",
+                borderBottomStyle: "solid",
+                borderBottomWidth: 1,
+                borderBottomColor: theme.palette.primary.dark,
             },
         },
         betList: {
             marginTop: 20,
-            border: "1px solid #000",
+            borderStyle: "solid",
+            borderWidth: 1,
+            borderColor: theme.palette.primary.dark,
             padding: 10,
         },
     })
@@ -39,13 +41,14 @@ const Notice = () => {
     return (
         <Box
             position="static"
-            bgcolor="secondary.main"
-            color="secondary.light"
+            bgcolor="primary.secondary"
+            color="primary.dark"
             className={classes.notice}
         >
-            <Typography variant="h1" component="h1">
-                ประกาศ <span>วันที่ 22/04/63</span>
+            <Typography variant="h1" component="h1" color="error">
+                ประกาศ
             </Typography>
+            <span>วันที่ 22/04/63</span>
         </Box>
     );
 };
@@ -55,8 +58,8 @@ const BetList = () => {
     return (
         <Box
             position="static"
-            bgcolor="secondary.main"
-            color="secondary.light"
+            bgcolor="primary.secondary"
+            color="primary.dark"
             className={classes.betList}
         >
             <Typography

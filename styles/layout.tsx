@@ -10,7 +10,6 @@ export const useLayout = makeStyles((theme: Theme) =>
         },
         right: {
             flexGrow: 1,
-            minWidth: 768,
             zIndex: 0,
             width: "auto",
         },
