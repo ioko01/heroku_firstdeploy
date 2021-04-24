@@ -3,13 +3,6 @@ import {
     createStyles,
     CssBaseline,
     makeStyles,
-    Paper,
-    Table,
-    TableBody,
-    TableCell,
-    TableContainer,
-    TableHead,
-    TableRow,
     Theme,
     ThemeProvider,
 } from "@material-ui/core";
@@ -19,7 +12,10 @@ import React from "react";
 import { useLayout } from "../../../styles/layout";
 import { theme } from "../../../styles/theme";
 import IndexContent from "./content/LayoutContent";
+import Logo from "./Logo";
 import NavigationBar from "./NavigationBar";
+import TableRate from "./TableRate";
+import UserDetail from "./UserDetail";
 
 interface LayoutProps {
     children: React.ReactNode;
@@ -55,26 +51,11 @@ const Leftbar = () => {
         <Box
             className={`${layout.left} ${classes.root}`}
             bgcolor="primary.main"
+            color="primary.white"
         >
-            <TableContainer
-                component={Paper}
-                variant="elevation"
-                elevation={0}
-                square={true}
-            >
-                <Table>
-                    <TableHead>
-                        <TableRow>
-                            <TableCell padding="none">asd</TableCell>
-                            <TableCell padding="none">asd</TableCell>
-                            <TableCell padding="none">asd</TableCell>
-                            <TableCell padding="none">asd</TableCell>
-                            <TableCell padding="none">asd</TableCell>
-                            <TableCell padding="none">asd</TableCell>
-                        </TableRow>
-                    </TableHead>
-                </Table>
-            </TableContainer>
+            <Logo />
+            <UserDetail />
+            <TableRate />
         </Box>
     );
 };

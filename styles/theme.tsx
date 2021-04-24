@@ -68,6 +68,9 @@ export const theme = createMuiTheme({
                     color: indigo["700"],
                     boxShadow: "0 0 3px 0 #303f9f",
                 },
+                "&:not(.link-active):hover": {
+                    opacity: 0.8,
+                },
             },
         },
         MuiTypography: {
@@ -126,6 +129,9 @@ export const theme = createMuiTheme({
             },
         },
         MuiTableCell: {
+            root: {
+                fontSize: 10,
+            },
             paddingNone: {
                 "&:last-child": {
                     padding: 5,

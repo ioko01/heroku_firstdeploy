@@ -11,6 +11,12 @@ type Page =
       }
     | {
           page: "reward";
+      }
+    | {
+          page: "account";
+      }
+    | {
+          page: "logout";
       };
 
 interface Props {
@@ -21,6 +27,8 @@ const index = ({ params }: Props) => {
     if (params.page === "bet-result") return <BetResult />;
     if (params.page === "balance") return <h1>balance</h1>;
     if (params.page === "reward") return <h1>reward</h1>;
+    if (params.page === "account") return <h1>account</h1>;
+    if (params.page === "logout") return <h1>logout</h1>;
 };
 
 export default index;
@@ -36,6 +44,8 @@ export const getStaticPaths: GetStaticPaths = async () => {
         { page: "bet-result" },
         { page: "balance" },
         { page: "reward" },
+        { page: "account" },
+        { page: "logout" },
     ];
 
     return {
