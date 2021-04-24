@@ -75,13 +75,13 @@ export const theme = createMuiTheme({
         },
         MuiTypography: {
             h1: {
-                fontSize: 18,
-            },
-            h5: {
                 fontSize: 16,
             },
-            h6: {
+            h5: {
                 fontSize: 14,
+            },
+            h6: {
+                fontSize: 12,
             },
             subtitle1: {
                 fontSize: 10,

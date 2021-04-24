@@ -85,7 +85,7 @@ const TableRate = () => {
                 <TableHead>
                     <TableRow>
                         <TableCell padding="none" align="center">
-                            ลาว HD
+                            หวยลาว STAR VIP
                             <br />
                             [อัตราจ่าย]
                         </TableCell>

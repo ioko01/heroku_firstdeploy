@@ -34,10 +34,10 @@ const useStyles = makeStyles((theme: Theme) =>
             },
         },
         cover: {
-            minWidth: 55,
-            minHeight: 30,
-            maxWidth: 70,
-            maxHeight: 40,
+            minWidth: 50,
+            minHeight: 25,
+            maxWidth: 60,
+            maxHeight: 35,
         },
     })
 );
@@ -64,10 +64,18 @@ const CardBet = () => {
                         21-04-2021
                     </Typography>
                     <Box display="flex" justifyContent="space-between">
-                        <Typography variant="subtitle1" color="textSecondary">
+                        <Typography
+                            variant="subtitle1"
+                            component="span"
+                            color="textSecondary"
+                        >
                             เวลาปิด
                         </Typography>
-                        <Typography variant="subtitle1" color="textSecondary">
+                        <Typography
+                            variant="subtitle1"
+                            component="span"
+                            color="textSecondary"
+                        >
                             21/04/2021, 21:45:00
                         </Typography>
                     </Box>
