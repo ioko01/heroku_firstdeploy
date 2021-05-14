@@ -3,17 +3,13 @@ import {
     Box,
     createStyles,
     makeStyles,
-    Theme,
     Toolbar,
 } from "@material-ui/core";
-import { indigo } from "@material-ui/core/colors";
-import { EditOutlined, ListAlt, Person } from "@material-ui/icons";
+import { EditOutlined, ListAlt } from "@material-ui/icons";
 import React from "react";
 import ActiveLink from "../../helpers/ActiveLink";
 
-interface Props {}
-
-const useStyles = makeStyles((theme: Theme) =>
+const useStyles = makeStyles(() =>
     createStyles({
         transition: {
             transition: "height .25s",
@@ -173,7 +169,7 @@ const Nav1 = () => {
     );
 };
 
-const NavigationBar = (props: Props) => {
+const NavigationBar = () => {
     return (
         <>
             <Nav1 />

@@ -102,9 +102,11 @@ export const theme = createMuiTheme({
             },
             gutters: {
                 "@media (min-width: 600px)": {
-                    padding: 0,
+                    paddingLeft: 0,
+                    paddingRight: 0,
                 },
-                padding: 0,
+                paddingLeft: 0,
+                paddingRight: 0,
             },
         },
         MuiAppBar: {

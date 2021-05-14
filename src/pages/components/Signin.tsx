@@ -46,11 +46,8 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-interface Props {}
-
-const Signin = (props: Props) => {
+const Signin = () => {
     const classes = useStyles();
-    const theme = useThemeProvider();
 
     return (
         <Container component="main" maxWidth="xs">

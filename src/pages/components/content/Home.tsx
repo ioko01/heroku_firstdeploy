@@ -49,6 +49,18 @@ const Notice = () => {
                 ประกาศ
             </Typography>
             <span>วันที่ 22/04/63</span>
+            <Typography variant="body1" component="p">
+                ขณะนี้มีกลุ่มลูกค้าและแอดมินของบางสายงานได้ทำการฝากแทงหวยเข้ามา
+                ซึ่งทางบริษัทได้ตรวจสอบพบว่า เป็นรายการแทงที่ไม่ปกติ
+                หากบริษัทตรวจพบรายการฝากแทงที่ทำให้บริษัทเกิดความเสียหายในรูปแบบเพื่อทำยอดคอมมิชชั่น
+                ทางบริษัทขอสงวนสิทธิ์ในการ
+            </Typography>
+            <Typography variant="h4" component="span" color="error">
+                ***ยกเลิกรายการเล่นทุกกรณี***
+            </Typography>
+            <Typography variant="body1" component="p">
+                เรียนมาเพื่อทราบ และปฏิบัติตามกฎกติกาของทางบริษัท ขอบคุณครับ
+            </Typography>
         </Box>
     );
 };
@@ -56,37 +68,71 @@ const Notice = () => {
 const BetList = () => {
     const classes = useStyles();
     return (
-        <Box
-            position="static"
-            bgcolor="primary.secondary"
-            color="primary.dark"
-            className={classes.betList}
-        >
-            <Typography
-                variant="h1"
-                component="h1"
-                style={{ paddingBottom: 10 }}
+        <>
+            <Box
+                position="static"
+                bgcolor="primary.secondary"
+                color="primary.dark"
+                className={classes.betList}
             >
-                หวยรายวัน
-            </Typography>
-            <Grid container spacing={2}>
-                <Grid item sm={4} md={3}>
-                    <CardBet />
+                <Typography
+                    variant="h1"
+                    component="h1"
+                    style={{ paddingBottom: 10 }}
+                >
+                    หวยรายวัน
+                </Typography>
+                <Grid container spacing={2}>
+                    <Grid item xs={4} lg={3}>
+                        <CardBet />
+                    </Grid>
+                    <Grid item xs={4} lg={3}>
+                        <CardBet />
+                    </Grid>
+                    <Grid item xs={4} lg={3}>
+                        <CardBet />
+                    </Grid>
+                    <Grid item xs={4} lg={3}>
+                        <CardBet />
+                    </Grid>
+                    <Grid item xs={4} lg={3}>
+                        <CardBet />
+                    </Grid>
                 </Grid>
-                <Grid item sm={4} md={3}>
-                    <CardBet />
+            </Box>
+
+            <Box
+                position="static"
+                bgcolor="primary.secondary"
+                color="primary.dark"
+                className={classes.betList}
+            >
+                <Typography
+                    variant="h1"
+                    component="h1"
+                    style={{ paddingBottom: 10 }}
+                >
+                    หวยต่างประเทศ
+                </Typography>
+                <Grid container spacing={2}>
+                    <Grid item xs={4} lg={3}>
+                        <CardBet />
+                    </Grid>
+                    <Grid item xs={4} lg={3}>
+                        <CardBet />
+                    </Grid>
+                    <Grid item xs={4} lg={3}>
+                        <CardBet />
+                    </Grid>
+                    <Grid item xs={4} lg={3}>
+                        <CardBet />
+                    </Grid>
+                    <Grid item xs={4} lg={3}>
+                        <CardBet />
+                    </Grid>
                 </Grid>
-                <Grid item sm={4} md={3}>
-                    <CardBet />
-                </Grid>
-                <Grid item sm={4} md={3}>
-                    <CardBet />
-                </Grid>
-                <Grid item sm={4} md={3}>
-                    <CardBet />
-                </Grid>
-            </Grid>
-        </Box>
+            </Box>
+        </>
     );
 };
 
