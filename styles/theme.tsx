@@ -141,6 +141,17 @@ export const theme = createMuiTheme({
                 padding: 5,
             },
         },
+        MuiSvgIcon: {
+            fontSizeSmall: {
+                width: 15,
+                height: 15,
+            },
+        },
+        MuiFormControlLabel: {
+            label: {
+                fontSize: 12,
+            },
+        },
     },
 });
 

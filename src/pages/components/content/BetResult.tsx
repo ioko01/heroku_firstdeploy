@@ -2,15 +2,19 @@ import {
     Box,
     FormControl,
     FormControlLabel,
-    FormLabel,
-    makeStyles,
     Radio,
     RadioGroup,
     Typography,
 } from "@material-ui/core";
-import React from "react";
+import React, { ChangeEvent, useState } from "react";
 
 const BetResult = () => {
+    const [value, setValue] = useState("today");
+
+    const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
+        setValue((event.target as HTMLInputElement).value);
+    };
+
     return (
         <Box>
             <Typography variant="body1" component="p">
@@ -24,9 +28,12 @@ const BetResult = () => {
             >
                 <Box
                     display="block"
-                    borderBottom={1}
-                    padding={1}
+                    border={1}
+                    borderTop={0}
+                    borderLeft={0}
+                    borderRight={0}
                     borderColor="primary.secondary"
+                    padding={1}
                 >
                     <p>ตัวเลือกการค้นหา</p>
                 </Box>
@@ -35,9 +42,10 @@ const BetResult = () => {
                     <FormControl component="fieldset">
                         <RadioGroup
                             row
-                            aria-label="position"
-                            name="position"
-                            defaultValue="top"
+                            aria-label="search"
+                            name="search"
+                            value={value}
+                            onChange={handleChange}
                         >
                             <FormControlLabel
                                 value="today"
